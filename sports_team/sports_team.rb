@@ -14,4 +14,8 @@ class SportsTeam
     return @coach
   end
 
+  def get_players
+    return @players
+  end
+
 end
