@@ -22,7 +22,12 @@ class CodeclanStudentTest < MiniTest::Test
   def test_changing_existing_student__cohort
     new_student = CodeclanStudent.new("Stuart", "E22")
     new_student.set_cohort("E1")
-    assert_equal("E1", new_student.get_cohort())    
+    assert_equal("E1", new_student.get_cohort())
+  end
+
+  def test_student_talks
+    new_student = CodeclanStudent.new("Stuart", "E22")
+    assert_equal("I can talk!", new_student.talk())
   end
 
 end
