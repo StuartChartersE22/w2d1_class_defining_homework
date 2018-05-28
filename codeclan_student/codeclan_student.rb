@@ -9,6 +9,8 @@ class CodeclanStudent
     return @student_name
   end
 
-  
+  def get_cohort()
+    return @cohort
+  end
 
 end
