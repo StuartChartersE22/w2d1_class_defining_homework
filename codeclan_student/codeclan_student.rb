@@ -13,4 +13,8 @@ class CodeclanStudent
     return @cohort
   end
 
+  def set_name(new_name)
+    @student_name = new_name
+  end
+
 end

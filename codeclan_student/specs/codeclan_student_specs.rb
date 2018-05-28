@@ -12,4 +12,10 @@ class CodeclanStudentTest < MiniTest::Test
     new_student = CodeclanStudent.new("Stuart", "E22")
     assert_equal("E22", new_student.get_cohort())
   end
+
+  def test_changing_existing_student__name
+    new_student = CodeclanStudent.new("Stuart", "E22")
+    new_student.set_name("Bob")
+    assert_equal("Bob", new_student.get_name())    
+  end
 end
