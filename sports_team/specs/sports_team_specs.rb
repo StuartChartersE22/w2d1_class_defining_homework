@@ -8,4 +8,9 @@ class SportsTeamTest < MiniTest::Test
     assert_equal("CodeClan",new_team.get_team_name())
   end
 
+  def test_get_coach
+    new_team = SportsTeam.new("CodeClan", "Stuart")
+    assert_equal("Stuart",new_team.get_coach())
+  end
+
 end
