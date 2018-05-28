@@ -58,4 +58,20 @@ class SportsTeamTest < MiniTest::Test
     new_team.points_awarded("win")
     assert_equal(3, new_team.points())
   end
+
+  def test_team_lost
+    new_team = SportsTeam.new("CodeClan", "Jim")
+    players = ["Bob", "Jay", "Rachel"]
+    new_team.add_array_of_players(players)
+    new_team.points_awarded("lost")
+    assert_equal(-1, new_team.points())
+  end
+
+  def test_team_draw
+    new_team = SportsTeam.new("CodeClan", "Jim")
+    players = ["Bob", "Jay", "Rachel"]
+    new_team.add_array_of_players(players)
+    new_team.points_awarded("draw")
+    assert_equal(1, new_team.points())
+  end
 end

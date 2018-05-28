@@ -31,7 +31,7 @@ class SportsTeam
     case outcome
     when "win"
       @points += 3
-    when "lose"
+    when "lost"
       @points -= 1
     when "draw"
       @points += 1
