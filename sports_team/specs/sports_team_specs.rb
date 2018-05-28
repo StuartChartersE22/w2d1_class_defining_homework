@@ -20,7 +20,8 @@ class SportsTeamTest < MiniTest::Test
 
   def test_get_players
     players = ["Bob", "Jay", "Rachel"]
-    new_team = SportsTeam.new("CodeClan", "Stuart", players)
+    new_team = SportsTeam.new("CodeClan", "Stuart")
+    new_team.add_array_of_players(players)
     assert_equal(3,new_team.players().length())
   end
 
@@ -32,7 +33,7 @@ class SportsTeamTest < MiniTest::Test
 
   def test_add_player_to_team
     new_team = SportsTeam.new("CodeClan")
-    new_team.add_player("Greg")
+    new_team.add_single_player("Greg")
     assert_equal(1,new_team.players().length())
   end
 

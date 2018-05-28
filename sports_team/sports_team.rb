@@ -3,14 +3,19 @@ class SportsTeam
   attr_accessor(:coach)
   attr_reader(:team_name, :players)
 
-  def initialize(team_name, coach=nil, players=[])
+  def initialize(team_name, coach=nil)
     @team_name = team_name
-    @players = players
+    @players = []
     @coach = coach
   end
 
-  def add_player(new_player)
-    @players.push(new_player)
+  def add_array_of_players(new_players)
+    for player in new_players
+      @players.push(player)
+    end
   end
 
+  def add_single_player(new_player)
+    @players.push(new_player)
+  end
 end
