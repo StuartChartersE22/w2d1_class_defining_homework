@@ -18,4 +18,12 @@ class SportsTeam
   def add_single_player(new_player)
     @players.push(new_player)
   end
+
+  def is_player_in_team?(player_name)
+    for player in @players
+      return true if player == player_name
+    end
+    return false
+  end
+
 end
