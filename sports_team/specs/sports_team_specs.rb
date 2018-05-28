@@ -44,4 +44,11 @@ class SportsTeamTest < MiniTest::Test
     assert_equal(true,new_team.is_player_in_team?("Bob"))
   end
 
+  def test_is_player_in_team__false
+    new_team = SportsTeam.new("CodeClan")
+    players = ["Bob", "Jay", "Rachel"]
+    new_team.add_array_of_players(players)
+    assert_equal(false,new_team.is_player_in_team?("Stuart"))
+  end
+
 end
